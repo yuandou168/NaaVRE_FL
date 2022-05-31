@@ -1,0 +1,14 @@
+name: venv
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - pip:
+    - flwr
+    - torch
+    - opencv-python-headless
+    - torchvision
+    - pandas
+    - numpy
+    - sklearn
