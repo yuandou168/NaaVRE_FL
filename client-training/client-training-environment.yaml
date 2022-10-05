@@ -12,3 +12,5 @@ dependencies:
     - sklearn
     - opencv-python-headless
     - flwr
+
+
