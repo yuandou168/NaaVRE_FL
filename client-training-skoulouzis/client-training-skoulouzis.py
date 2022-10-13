@@ -1,15 +1,15 @@
-import torch
-import torchvision.models as models
-import ssl
-import pandas as pd
-import flwr as fl
-import torch.nn as nn
-import numpy as np
 import time
-import cv2
-from sklearn.metrics import confusion_matrix
+import flwr as fl
 from collections import OrderedDict
+import ssl
+from sklearn.metrics import confusion_matrix
+import numpy as np
+import torchvision.models as models
+import torch.nn as nn
+import torch
 from torch.utils.data import DataLoader
+import cv2
+import pandas as pd
 
 import argparse
 arg_parser = argparse.ArgumentParser()
