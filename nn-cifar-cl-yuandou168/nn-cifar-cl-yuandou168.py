@@ -1,13 +1,13 @@
-import numpy as np
-import torch.nn.functional as F
-import torch.nn as nn
-import time
-import torch
-from typing import Dict
+from torchvision.datasets import CIFAR10
+from typing import Tuple
 import torchvision.transforms as transforms
 from torch import Tensor
-from typing import Tuple
-from torchvision.datasets import CIFAR10
+import torch.nn.functional as F
+import time
+import torch.nn as nn
+from typing import Dict
+import torch
+import numpy as np
 import csv
 
 import argparse
