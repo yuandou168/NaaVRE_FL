@@ -11,4 +11,5 @@ FROM debian:buster AS runtime
 RUN apt update -y && apt upgrade -y && apt install jq -y
 COPY --from=build /venv /venv
 COPY nn-cifar-cl-yuandou168.py .
+COPY for.sh .
 
