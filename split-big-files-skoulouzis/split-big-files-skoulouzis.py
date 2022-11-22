@@ -1,7 +1,7 @@
-import os
-import numpy as np
-from webdav3.client import Client
 import pathlib
+import numpy as np
+import os
+from webdav3.client import Client
 import laspy
 
 import argparse
@@ -21,17 +21,17 @@ laz_files = args.laz_files
 
 param_username = args.param_username
 
-conf_wd_opts = { 'webdav_hostname':  'https://lifewatch.lab.uvalight.net:32443', 'webdav_login':  'MTg5OWI3YjZkYTUyOT', 'webdav_password':  'cxYTBmMjgxZWZi'}
+conf_remote_path_ahn = conf_remote_path_root + '/ahn'
+conf_wd_opts = { 'webdav_hostname': conf_hostname, 'webdav_login': conf_login, 'webdav_password': conf_password}
 conf_laz_compression_factor = '7'
-conf_remote_path_ahn =  '/webdav/pointcloud' + '/ahn'
+conf_remote_path_split = pathlib.Path(conf_remote_path_root + '/split_'+param_username)
 conf_max_filesize = '262144000'  # desired max file size (in bytes)
-conf_remote_path_split = pathlib.Path( '/webdav/pointcloud' + '/split_'+param_username)
 
-conf_wd_opts = { 'webdav_hostname':  'https://lifewatch.lab.uvalight.net:32443', 'webdav_login':  'MTg5OWI3YjZkYTUyOT', 'webdav_password':  'cxYTBmMjgxZWZi'}
+conf_remote_path_ahn = conf_remote_path_root + '/ahn'
+conf_wd_opts = { 'webdav_hostname': conf_hostname, 'webdav_login': conf_login, 'webdav_password': conf_password}
 conf_laz_compression_factor = '7'
-conf_remote_path_ahn =  '/webdav/pointcloud' + '/ahn'
+conf_remote_path_split = pathlib.Path(conf_remote_path_root + '/split_'+param_username)
 conf_max_filesize = '262144000'  # desired max file size (in bytes)
-conf_remote_path_split = pathlib.Path( '/webdav/pointcloud' + '/split_'+param_username)
 
 
 def save_chunk_to_laz_file(in_filename, 
